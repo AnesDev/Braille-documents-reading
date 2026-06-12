@@ -178,6 +178,3 @@ For questions or issues, please:
 
 Thank you to all contributors and the open-source community for making accessibility technology possible.
 
----
-
-**Last Updated:** June 2026

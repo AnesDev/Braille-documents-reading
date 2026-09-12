@@ -89,7 +89,7 @@ def detect_and_crop(model_path: Path, images_dir: Path, output_dir: Path):
         doc_folder = crops_dir / stem
         doc_folder.mkdir(parents=True, exist_ok=True)
 
-        # open as RGB to avoid paletted-mode save errors (e.g., webp/png palette)
+        # open as RGB to avoid paletted-mode save errors
         img = Image.open(img_file).convert("RGB")
         width, height = img.size
         detections = []
@@ -99,7 +99,7 @@ def detect_and_crop(model_path: Path, images_dir: Path, output_dir: Path):
                 parts = line.strip().split()
                 if len(parts) < 5:
                     continue
-                # YOLO label format: class xc yc w h [conf if saved]
+                # YOLO label format: class xc yc w h
                 # handle both 5-field and 6-field lines
                 if len(parts) >= 6:
                     _, xc, yc, w, h, _ = parts[:6]

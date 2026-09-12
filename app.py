@@ -57,7 +57,7 @@ if uploaded_file is not None:
         st.info("Drawing labels on the document...")
         labeled_docs_dir = draw_labels(results_dir)
 
-        # Show final labeled image (if exists)
+        # Show final labeled image
         labeled_images = list(labeled_docs_dir.glob("*_labeled.jpg"))
         if labeled_images:
             labeled_image_path = labeled_images[0]

@@ -73,7 +73,7 @@ def draw_labels(results_dir: Path):
         margin = 8
         # draw a semi-transparent rectangle for readability
         text_block = "Braille: " + assembled_text + "\nText: " + translated_text
-        # naive wrapping: cut to fit width -> prefer user to tweak if too long
+        # naive wrapping: cut to fit width 
         draw.rectangle([0, 0, width, 60], fill=(255,255,255,200))
         draw.text((margin, margin), "Braille: " + assembled_text, fill="black", font=font)
         draw.text((margin, margin + 18), "Text: " + (translated_text if translated_text else "N/A"), fill="black", font=font)
